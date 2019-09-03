@@ -77,13 +77,17 @@ message Visualization {
   // API.
   enum Type {
     ROC_CURVE = 0;
+    TFDV = 1;
+    TFMA = 2;
+    TABLE = 3;
+    CUSTOM = 4;
   };
   Type type = 1;
 
   // Path pattern of input data to be used during generation of visualizations.
   // This is required when creating the pipeline through CreateVisualization
   // API.
-  string inputPath = 2;
+  string source = 2;
 
   // Variables to be used during generation of a visualization.
   // This should be provided as a JSON string.
